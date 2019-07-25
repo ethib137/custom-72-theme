@@ -34,6 +34,16 @@
 							</#if>
 						</a>
 
+						<div class="language-entry autofit-col autofit-col-expand">
+							<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+
+							<@liferay_portlet["runtime"]
+								defaultPreferences=preferences
+								portletProviderAction=portletProviderAction.VIEW
+								portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
+							/>
+						</div>
+
 						<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
 						<div class="autofit-col autofit-col-expand">
