@@ -23,19 +23,12 @@
 <div class="pt-0" id="wrapper">
 	<#if show_header>
 		<header id="banner">
-			<div class="navbar navbar-classic navbar-top py-3">
+			<div class="navbar navbar-classic navbar-top py-2">
 				<div class="container user-personal-bar">
 					<div class="align-items-center autofit-row">
-						<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
-							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
-
-							<#if show_site_name>
-								<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
-							</#if>
-						</a>
 
 						<#if show_language_selector>
-							<div class="autofit-col autofit-col-expand language-selector ml-4 mr-4">
+							<div class="autofit-col autofit-col-expand language-selector mr-4">
 								<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 
 								<@liferay_portlet["runtime"]
@@ -63,19 +56,27 @@
 				</div>
 			</div>
 
-			<div class="navbar navbar-classic navbar-expand-md navbar-light pb-3">
-				<div class="container">
-					<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs" href="${site_default_url}" rel="nofollow">
-						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+				<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
+					<div class="container">
+						<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
-						<#if show_site_name>
-							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
-						</#if>
-					</a>
+							<#if show_site_name>
+								<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+							</#if>
+						</a>
+						
+						<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs mr-4" href="${site_default_url}" rel="nofollow">
+							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
-					<#include "${full_templates_path}/navigation.ftl" />
+							<#if show_site_name>
+								<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+							</#if>
+						</a>
+
+						<#include "${full_templates_path}/navigation.ftl" />
+					</div>
 				</div>
-			</div>
 		</header>
 	</#if>
 

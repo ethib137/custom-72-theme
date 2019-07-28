@@ -1,4 +1,39 @@
+/* Site Navigation Hover Animation */
+.site-navigation .navbar-nav {
+	a {
+		display: inline-block;
+		letter-spacing: 0.15em;
+		padding: 15px 20px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:after {    
+			@include background-image(linear-gradient(60deg, $themePrimary 0%, $themePrimarySoft 100%));
+
+			background-color: $themePrimary;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: 4px;
+			left: 50%;
+			position: absolute;
+			transition: width 0.3s ease 0s, left 0.3s ease 0s;
+			width: 0;
+		}
+
+		&:hover:after { 
+			left: 0; 
+			width: 100%; 
+		}
+	}
+
+}
+
 .navbar-top {
+	@include background-image(linear-gradient(60deg, $themePrimary 0%, $themePrimarySoft 200%));
+
+	background-color: $themePrimary;
 	padding-bottom: 0.907rem;
 	padding-top: 0.907rem;
 
@@ -15,8 +50,6 @@
 }
 
 .navbar-classic {
-	background-color: #fff;
-
 	&.navbar-light {
 		border-bottom: 1px solid $light-color;
 
