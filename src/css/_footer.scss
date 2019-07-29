@@ -3,10 +3,10 @@
 		margin-bottom: 0;
 
 		a {
-			color: $textWithPrimaryBackground;
+			color: $textWithThemeBackground;
 
 			&:hover {
-				color: $textWithPrimaryBackground;
+				color: $textWithThemeBackground;
 				text-decoration: underline;
 			}
 		}
