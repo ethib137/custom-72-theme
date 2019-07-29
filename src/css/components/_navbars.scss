@@ -29,19 +29,25 @@
 	}
 }
 
-.social-icons .social-icon {
-	color: $textWithPrimaryBackground;
-	display: inline-block;
-
-	.icon:before {
-		@include transition(transform 0.25s ease);
+.social-icons {
+	&.d-md-none .social-icon {
+		color: $theme;
 	}
 
-	&:hover {
-		text-decoration: none;
+	.social-icon {
+		color: $textWithPrimaryBackground;
+		display: inline-block;
 
 		.icon:before {
-			@include transform(rotate(-20deg));
+			@include transition(transform 0.25s ease);
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.icon:before {
+				@include transform(rotate(-20deg));
+			}
 		}
 	}
 }

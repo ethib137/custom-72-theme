@@ -38,22 +38,8 @@
 							</div>
 						</#if>
 
-						<div class="social-icons mr-1 mr-md-2 flex-shrink-0">
-							<#if rss_url?has_content>
-								<a class="p-1 p-md-2 social-icon" href="${rss_url}" target="_blank"><span class="icon icon-large icon-rss"></span></a>
-							</#if>
-							<#if twitter_url?has_content>
-								<a class="p-1 p-md-2 social-icon" href="${twitter_url}" target="_blank"><span class="icon icon-large icon-twitter"></span></a>
-							</#if>
-							<#if facebook_url?has_content>
-								<a class="p-1 p-md-2 social-icon" href="${facebook_url}" target="_blank"><span class="icon icon-large icon-facebook"></span></a>
-							</#if>
-							<#if youtube_url?has_content>
-								<a class="p-1 p-md-2 social-icon" href="${youtube_url}" target="_blank"><span class="icon icon-large icon-youtube"></span></a>
-							</#if>
-							<#if instagram_url?has_content>
-								<a class="p-1 p-md-2 social-icon" href="${instagram_url}" target="_blank"><span class="icon icon-large icon-instagram"></span></a>
-							</#if>
+						<div class="d-md-block d-none social-icons mr-1 mr-md-2 flex-shrink-0">
+							<#include "${full_templates_path}/social_icons.ftl" />
 						</div>
 
 						<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
@@ -75,7 +61,7 @@
 
 			<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
 				<div class="container">
-					<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+					<a class="${logo_css_class} align-items-center d-md-inline-flex d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
 						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
 						<#if show_site_name>
@@ -90,6 +76,10 @@
 							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
 						</#if>
 					</a>
+
+					<div class="d-md-none social-icons mr-1 mr-md-2 flex-shrink-0">
+						<#include "${full_templates_path}/social_icons.ftl" />
+					</div>
 
 					<#include "${full_templates_path}/navigation.ftl" />
 				</div>
