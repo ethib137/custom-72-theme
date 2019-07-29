@@ -79,9 +79,9 @@ body {
 }
 
 #footer {
-	@include background-image(linear-gradient(60deg, $themePrimary 0%, $themePrimarySoft 200%));
+	@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 200%));
 
-	background-color: $themePrimary;
+	background-color: $theme;
 	color: #fff;
 	margin-top: 1rem;
 

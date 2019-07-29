@@ -9,9 +9,9 @@
 		text-transform: uppercase;
 
 		&:after {    
-			@include background-image(linear-gradient(60deg, $themePrimary 0%, $themePrimarySoft 100%));
+			@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 100%));
 
-			background-color: $themePrimary;
+			background-color: $theme;
 			bottom: 0;
 			content: "";
 			display: block;
@@ -39,9 +39,9 @@
 }
 
 .navbar-top {
-	@include background-image(linear-gradient(60deg, $themePrimary 0%, $themePrimarySoft 200%));
+	@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 200%));
 
-	background-color: $themePrimary;
+	background-color: $theme;
 	padding-bottom: 0.907rem;
 	padding-top: 0.907rem;
 
