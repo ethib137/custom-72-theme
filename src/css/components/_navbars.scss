@@ -27,7 +27,15 @@
 			width: 100%; 
 		}
 	}
+}
 
+.social-icons .social-icon {
+	color: $textWithPrimaryBackground;
+	display: inline-block;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .navbar-top {

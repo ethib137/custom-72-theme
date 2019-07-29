@@ -1,4 +1,10 @@
 <#assign
+	rss_url = getterUtil.getString(themeDisplay.getThemeSetting("rss-url"))
+	twitter_url = getterUtil.getString(themeDisplay.getThemeSetting("twitter-url"))
+	facebook_url = getterUtil.getString(themeDisplay.getThemeSetting("facebook-url"))
+	youtube_url = getterUtil.getString(themeDisplay.getThemeSetting("youtube-url"))
+	instagram_url = getterUtil.getString(themeDisplay.getThemeSetting("instagram-url"))
+
 	show_footer = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer"))
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))

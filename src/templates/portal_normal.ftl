@@ -26,7 +26,6 @@
 			<div class="navbar navbar-classic navbar-top py-2">
 				<div class="container user-personal-bar">
 					<div class="align-items-center autofit-row">
-
 						<#if show_language_selector>
 							<div class="autofit-col autofit-col-expand language-selector mr-4">
 								<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
@@ -39,9 +38,27 @@
 							</div>
 						</#if>
 
+						<div class="social-icons mr-2 flex-shrink-0">
+							<#if rss_url?has_content>
+								<a class="mr-2 social-icon" href="${rss_url}" target="_blank"><span class="icon icon-large icon-rss"></span></a>
+							</#if>
+							<#if twitter_url?has_content>
+								<a class="mr-2 social-icon" href="${twitter_url}" target="_blank"><span class="icon icon-large icon-twitter"></span></a>
+							</#if>
+							<#if facebook_url?has_content>
+								<a class="mr-2 social-icon" href="${facebook_url}" target="_blank"><span class="icon icon-large icon-facebook"></span></a>
+							</#if>
+							<#if youtube_url?has_content>
+								<a class="mr-2 social-icon" href="${youtube_url}" target="_blank"><span class="icon icon-large icon-youtube"></span></a>
+							</#if>
+							<#if instagram_url?has_content>
+								<a class="mr-2 social-icon" href="${instagram_url}" target="_blank"><span class="icon icon-large icon-instagram"></span></a>
+							</#if>
+						</div>
+
 						<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
 
-						<div class="autofit-col autofit-col-expand">
+						<div class="autofit-col flex-grow-1 flex-shrink-1">
 							<#if show_header_search>
 								<div class="justify-content-md-end mr-4 navbar-form" role="search">
 									<@liferay.search_bar default_preferences="${preferences}" />

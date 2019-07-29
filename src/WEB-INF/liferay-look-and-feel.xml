@@ -17,6 +17,12 @@
 			<setting configurable="false" key="show-site-name-default" value="true" />
 			<setting configurable="false" key="show-site-name-supported" value="true" />
 			<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true" />
+
+			<setting configurable="true" key="rss-url" type="text" value="" />
+			<setting configurable="true" key="twitter-url" type="text" value="" />
+			<setting configurable="true" key="facebook-url" type="text" value="" />
+			<setting configurable="true" key="youtube-url" type="text" value="" />
+			<setting configurable="true" key="instagram-url" type="text" value="" />
 		</settings>
 		<roles>
 			<role-name>User</role-name>
