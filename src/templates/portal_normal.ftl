@@ -27,7 +27,7 @@
 				<div class="container user-personal-bar">
 					<div class="align-items-center autofit-row">
 						<#if show_language_selector>
-							<div class="autofit-col autofit-col-expand language-selector mr-4">
+							<div class="autofit-col autofit-col-expand language-selector mr-1 mr-md-2">
 								<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 
 								<@liferay_portlet["runtime"]
@@ -38,21 +38,21 @@
 							</div>
 						</#if>
 
-						<div class="social-icons mr-2 flex-shrink-0">
+						<div class="social-icons mr-1 mr-md-2 flex-shrink-0">
 							<#if rss_url?has_content>
-								<a class="mr-2 social-icon" href="${rss_url}" target="_blank"><span class="icon icon-large icon-rss"></span></a>
+								<a class="mx-1 mx-md-2 social-icon" href="${rss_url}" target="_blank"><span class="icon icon-large icon-rss"></span></a>
 							</#if>
 							<#if twitter_url?has_content>
-								<a class="mr-2 social-icon" href="${twitter_url}" target="_blank"><span class="icon icon-large icon-twitter"></span></a>
+								<a class="mx-1 mx-md-2 social-icon" href="${twitter_url}" target="_blank"><span class="icon icon-large icon-twitter"></span></a>
 							</#if>
 							<#if facebook_url?has_content>
-								<a class="mr-2 social-icon" href="${facebook_url}" target="_blank"><span class="icon icon-large icon-facebook"></span></a>
+								<a class="mx-1 mx-md-2 social-icon" href="${facebook_url}" target="_blank"><span class="icon icon-large icon-facebook"></span></a>
 							</#if>
 							<#if youtube_url?has_content>
-								<a class="mr-2 social-icon" href="${youtube_url}" target="_blank"><span class="icon icon-large icon-youtube"></span></a>
+								<a class="mx-1 mx-md-2 social-icon" href="${youtube_url}" target="_blank"><span class="icon icon-large icon-youtube"></span></a>
 							</#if>
 							<#if instagram_url?has_content>
-								<a class="mr-2 social-icon" href="${instagram_url}" target="_blank"><span class="icon icon-large icon-instagram"></span></a>
+								<a class="mx-1 mx-md-2 social-icon" href="${instagram_url}" target="_blank"><span class="icon icon-large icon-instagram"></span></a>
 							</#if>
 						</div>
 
@@ -60,7 +60,7 @@
 
 						<div class="autofit-col flex-grow-1 flex-shrink-1">
 							<#if show_header_search>
-								<div class="justify-content-md-end mr-4 navbar-form" role="search">
+								<div class="justify-content-md-end mr-2 mr-md-4 navbar-form" role="search">
 									<@liferay.search_bar default_preferences="${preferences}" />
 								</div>
 							</#if>
@@ -73,27 +73,27 @@
 				</div>
 			</div>
 
-				<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
-					<div class="container">
-						<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
-							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+			<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
+				<div class="container">
+					<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
-							<#if show_site_name>
-								<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
-							</#if>
-						</a>
-						
-						<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs mr-4" href="${site_default_url}" rel="nofollow">
-							<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+						<#if show_site_name>
+							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+						</#if>
+					</a>
+					
+					<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs mr-4" href="${site_default_url}" rel="nofollow">
+						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
-							<#if show_site_name>
-								<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
-							</#if>
-						</a>
+						<#if show_site_name>
+							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+						</#if>
+					</a>
 
-						<#include "${full_templates_path}/navigation.ftl" />
-					</div>
+					<#include "${full_templates_path}/navigation.ftl" />
 				</div>
+			</div>
 		</header>
 	</#if>
 
@@ -114,13 +114,26 @@
 	</section>
 
 	<#if show_footer>
-		<footer id="footer" role="contentinfo">
+		<footer class="footer" id="footer" role="contentinfo">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 text-center text-md-left">
-						<@liferay.language key="powered-by" />
+					<div class="align-items-center col-md-4 d-flex justify-content-md-start justify-content-center">
+						<span>
+							<@liferay.language key="powered-by" />
 
-						<a class="text-white" href="http://www.liferay.com" rel="external">Liferay</a>
+							<a class="text-white" href="http://www.liferay.com" rel="external">Liferay</a>
+						</span>
+					</div>
+
+					<div class="col-md-8 d-flex justify-content-md-start justify-content-center">
+						<#if show_footer_navigation>
+							<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+
+							<@liferay_portlet["runtime"]
+								defaultPreferences=preferences
+								portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
+							/>
+						</#if>
 					</div>
 				</div>
 			</div>

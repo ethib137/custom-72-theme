@@ -1,0 +1,14 @@
+.footer {
+	.portlet-navigation .portlet {
+		margin-bottom: 0;
+
+		a {
+			color: $textWithPrimaryBackground;
+
+			&:hover {
+				color: $textWithPrimaryBackground;
+				text-decoration: underline;
+			}
+		}
+	}
+}

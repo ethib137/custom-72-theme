@@ -6,6 +6,7 @@
 	instagram_url = getterUtil.getString(themeDisplay.getThemeSetting("instagram-url"))
 
 	show_footer = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer"))
+	show_footer_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer-navigation"))
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	show_language_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-language-selector"))
