@@ -1,4 +1,3 @@
-
 body {
 	header {
 		.field-wrapper {
@@ -76,6 +75,10 @@ body {
 	@include media-breakpoint-up(md) {
 		top: auto;
 	}
+}
+
+#content {
+	min-height: calc(100vh - 252px);
 }
 
 #footer {
