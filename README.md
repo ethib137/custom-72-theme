@@ -2,6 +2,14 @@
 
 A simple Liferay theme that allows for easy customization of the color scheme.
 
+### Set Up
+
+*** At this point Liferay Theme's require `NPM 10` or earlier in order to play nicely with `Gulp 3`.
+
+1. `npm install`
+2. `gulp init`
+3. `gulp deploy`
+
 ### Desktop
 
 ![desktop](/src/images/desktop.png)
