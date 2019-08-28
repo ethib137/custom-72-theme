@@ -24,6 +24,10 @@
 			<setting configurable="true" key="facebook-url" type="text" value="" />
 			<setting configurable="true" key="youtube-url" type="text" value="" />
 			<setting configurable="true" key="instagram-url" type="text" value="" />
+
+			<setting configurable="true" key="theme-color" type="text" value="#00467F" />
+			<setting configurable="true" key="theme-blend-color" type="text" value="#A5CC82" />
+			<setting configurable="true" key="text-with-theme-background-color" type="text" value="#FFF" />
 		</settings>
 		<roles>
 			<role-name>User</role-name>

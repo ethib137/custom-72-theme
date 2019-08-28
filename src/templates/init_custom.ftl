@@ -11,6 +11,10 @@
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	show_language_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-language-selector"))
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
+
+	theme_color = getterUtil.getString(themeDisplay.getThemeSetting("theme-color"))
+	theme_blend_color = getterUtil.getString(themeDisplay.getThemeSetting("theme-blend-color"))
+	text_with_theme_background_color = getterUtil.getString(themeDisplay.getThemeSetting("text-with-theme-background-color"))
 />
 
 <#if wrap_widget_page_content && (layout.getType() == "portlet")>
@@ -18,3 +22,5 @@
 <#else>
 	<#assign portal_content_css_class = "" />
 </#if>
+
+<#assign css_class = css_class + " override-theme-colors" />

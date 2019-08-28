@@ -10,6 +10,8 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 
 	<@liferay_util["include"] page=top_head_include />
+
+	<#include "${full_templates_path}/styles.ftl" />
 </head>
 
 <body class="${css_class}">
