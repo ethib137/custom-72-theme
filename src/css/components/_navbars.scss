@@ -1,30 +1,50 @@
-/* Site Navigation Hover Animation */
-.site-navigation .navbar-nav {
-	a {
-		display: inline-block;
-		letter-spacing: 0.15em;
-		padding: 15px 20px;
-		position: relative;
-		text-decoration: none;
+.navbar-classic .secondary-navigation {
+	.nav-link {
+		color: $textWithThemeBackground;
+		font-size: 12px;
+		font-weight: lighter;
+		letter-spacing: 1px;
 		text-transform: uppercase;
+	}
 
-		&:after {    
-			@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 100%));
-			@include transition(width 0.3s ease 0s, left 0.3s ease 0s);
+	.nav-item.selected .nav-link {
+		font-weight: bold;
+	}
+}
 
-			background-color: $theme;
-			bottom: 0;
-			content: "";
-			display: block;
-			height: 4px;
-			left: 50%;
-			position: absolute;
-			width: 0;
-		}
+.site-navigation {
+	.portlet-navigation {
+		margin-left: auto;
+	}
 
-		&:hover:after { 
-			left: 0; 
-			width: 100%; 
+	/* Site Navigation Hover Animation */
+	.navbar-nav {
+		a {
+			display: inline-block;
+			letter-spacing: 0.15em;
+			padding: 15px 20px;
+			position: relative;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			&:after {    
+				@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 100%));
+				@include transition(width 0.3s ease 0s, left 0.3s ease 0s);
+
+				background-color: $theme;
+				bottom: 0;
+				content: "";
+				display: block;
+				height: 4px;
+				left: 50%;
+				position: absolute;
+				width: 0;
+			}
+
+			&:hover:after { 
+				left: 0; 
+				width: 100%; 
+			}
 		}
 	}
 }

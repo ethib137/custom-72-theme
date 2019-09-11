@@ -15,15 +15,17 @@
 			<setting configurable="true" key="show-header-search" type="checkbox" value="true" />
 			<setting configurable="true" key="show-language-selector" type="checkbox" value="true" />
 			<setting configurable="true" key="show-maximize-minimize-application-links" type="checkbox" value="false" />
+			<setting configurable="true" key="show-secondary-header-navigation" type="checkbox" value="false" />
 			<setting configurable="false" key="show-site-name-default" value="true" />
 			<setting configurable="false" key="show-site-name-supported" value="true" />
+
 			<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true" />
 
 			<setting configurable="true" key="rss-url" type="text" value="" />
-			<setting configurable="true" key="twitter-url" type="text" value="" />
-			<setting configurable="true" key="facebook-url" type="text" value="" />
+			<setting configurable="true" key="twitter-url" type="text" value="www.twitter.com" />
+			<setting configurable="true" key="facebook-url" type="text" value="www.facebook.com" />
 			<setting configurable="true" key="youtube-url" type="text" value="" />
-			<setting configurable="true" key="instagram-url" type="text" value="" />
+			<setting configurable="true" key="instagram-url" type="text" value="www.instagram.com" />
 
 			<setting configurable="true" key="theme-color" type="text" value="#00467F" />
 			<setting configurable="true" key="theme-blend-color" type="text" value="#A5CC82" />

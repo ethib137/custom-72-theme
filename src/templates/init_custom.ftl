@@ -10,6 +10,7 @@
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))
 	show_header_search = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header-search"))
 	show_language_selector = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-language-selector"))
+	show_secondary_header_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-secondary-header-navigation"))
 	wrap_widget_page_content = getterUtil.getBoolean(themeDisplay.getThemeSetting("wrap-widget-page-content"))
 
 	theme_color = getterUtil.getString(themeDisplay.getThemeSetting("theme-color"))

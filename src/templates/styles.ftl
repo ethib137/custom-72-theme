@@ -1,4 +1,4 @@
-<style>
+<style data-senna-track="temporary">
 	.override-theme-colors .navbar-top {
 		background-image: -webkit-linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);
 		background-image: linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);

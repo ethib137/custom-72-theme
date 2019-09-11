@@ -26,16 +26,28 @@
 	<#if show_header>
 		<header id="banner">
 			<div class="navbar navbar-classic navbar-top py-2">
-				<div class="container user-personal-bar">
+				<div class="container-fluid px-lg-4 px-xl-6 user-personal-bar">
 					<div class="align-items-center autofit-row">
 						<#if show_language_selector>
-							<div class="autofit-col autofit-col-expand language-selector mr-1 mr-md-2">
+							<div class="autofit-col language-selector mr-1 mr-md-2">
 								<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
 
 								<@liferay_portlet["runtime"]
 									defaultPreferences=preferences
 									portletProviderAction=portletProviderAction.VIEW
 									portletProviderClassName="com.liferay.portal.kernel.servlet.taglib.ui.LanguageEntry"
+								/>
+							</div>
+						</#if>
+
+						<#if show_secondary_header_navigation>
+							<div class="autofit-col autofit-col-expand d-md-block d-none ml-3 mr-1 mr-md-2 secondary-navigation">
+								<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+
+								<@liferay_portlet["runtime"]
+									defaultPreferences=preferences
+									instanceId="secondary_navigation"
+									portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
 								/>
 							</div>
 						</#if>
@@ -48,7 +60,7 @@
 
 						<div class="autofit-col flex-grow-1 flex-shrink-1">
 							<#if show_header_search>
-								<div class="justify-content-md-end mr-2 mr-md-4 navbar-form" role="search">
+								<div class="justify-content-md-end ml-md-2 mr-2 mr-md-4 navbar-form" role="search">
 									<@liferay.search_bar default_preferences="${preferences}" />
 								</div>
 							</#if>
@@ -62,12 +74,12 @@
 			</div>
 
 			<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
-				<div class="container">
+				<div class="container-fluid px-lg-4 px-xl-6">
 					<a class="${logo_css_class} align-items-center d-md-inline-flex d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
 						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
 						<#if show_site_name>
-							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+							<h1 class="font-weight-light h2 mb-0 text-dark text-uppercase">${site_name}</h1>
 						</#if>
 					</a>
 					
@@ -75,7 +87,7 @@
 						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
 
 						<#if show_site_name>
-							<h1 class="font-weight-bold h2 mb-0 text-dark">${site_name}</h1>
+							<h1 class="font-weight-light h2 mb-0 text-dark text-uppercase">${site_name}</h1>
 						</#if>
 					</a>
 
