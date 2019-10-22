@@ -12,6 +12,10 @@
 	}
 }
 
+.navbar-nav .nav-item {
+	position: relative;
+}
+
 .site-navigation {
 	.portlet-navigation {
 		margin-left: auto;
@@ -19,13 +23,9 @@
 
 	/* Site Navigation Hover Animation */
 	.navbar-nav {
-		a {
-			display: inline-block;
-			letter-spacing: 0.15em;
+		> .nav-item > a {
 			padding: 15px 20px;
 			position: relative;
-			text-decoration: none;
-			text-transform: uppercase;
 
 			&:after {    
 				@include background-image(linear-gradient(60deg, $theme 0%, $themeSoft 100%));
@@ -45,6 +45,13 @@
 				left: 0; 
 				width: 100%; 
 			}
+		}
+
+		a {
+			display: inline-block;
+			letter-spacing: 0.15em;
+			text-decoration: none;
+			text-transform: uppercase;
 		}
 	}
 }
