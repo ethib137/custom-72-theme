@@ -24,11 +24,14 @@ A simple Liferay theme that allows for easy customization of the color scheme.
 * Embeded Navigation Portlet in Footer
 * Social Icons
 * Header Search
+* Secondary Header Navigation
 * Customizable Theme Settings
 
 ### Customizing
 
-Any changes to the color scheme can be made in `_clay_variables.scss`. 
+The color of the header and footer can easily be changed through the following theme settings: `theme-color`, `theme-blend-color`, `text-with-theme-background-color`.
+
+Any additional changes to the color scheme can be made in `_clay_variables.scss`. 
 
 ```scss
 /* Theme Colors */
