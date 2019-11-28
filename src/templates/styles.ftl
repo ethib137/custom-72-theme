@@ -1,7 +1,7 @@
 <style data-senna-track="temporary">
 	.override-theme-colors .navbar-top {
-		background-image: -webkit-linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);
-		background-image: linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);
+		background-image: -webkit-linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 120%);
+		background-image: linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 120%);
 		background-color: ${theme_color};
 	}
 
@@ -21,8 +21,8 @@
 	}
 
 	.override-theme-colors #footer {
-		background-image: -webkit-linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);
-		background-image: linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 200%);
+		background-image: -webkit-linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 120%);
+		background-image: linear-gradient(60deg, ${theme_color} 0%, ${theme_blend_color} 120%);
 		background-color: ${theme_color};
 		color: ${text_with_theme_background_color};
 	}
