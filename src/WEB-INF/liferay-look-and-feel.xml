@@ -22,10 +22,10 @@
 			<setting configurable="true" key="wrap-widget-page-content" type="checkbox" value="true" />
 
 			<setting configurable="true" key="rss-url" type="text" value="" />
-			<setting configurable="true" key="twitter-url" type="text" value="www.twitter.com" />
-			<setting configurable="true" key="facebook-url" type="text" value="www.facebook.com" />
+			<setting configurable="true" key="twitter-url" type="text" value="" />
+			<setting configurable="true" key="facebook-url" type="text" value="" />
 			<setting configurable="true" key="youtube-url" type="text" value="" />
-			<setting configurable="true" key="instagram-url" type="text" value="www.instagram.com" />
+			<setting configurable="true" key="instagram-url" type="text" value="" />
 
 			<setting configurable="true" key="theme-color" type="text" value="#00467F" />
 			<setting configurable="true" key="theme-blend-color" type="text" value="#A5CC82" />

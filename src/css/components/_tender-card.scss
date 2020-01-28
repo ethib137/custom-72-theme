@@ -1,0 +1,84 @@
+.tender-card-root {
+	border-radius: 20px 0 20px 0;
+
+	&.bg-new {
+		background: #5da594 linear-gradient(180deg,#75b3a4,#5da594) repeat-x !important;
+
+		.category {
+			color: #5da594;
+		}
+	}
+
+	&.bg-open {
+		background: #208fcb linear-gradient(180deg,#41a0d3,#208fcb) repeat-x !important;
+
+		.category {
+			color: #208fcb;
+		}
+	}
+
+	&.bg-closed {
+		background: #a7a9ac linear-gradient(180deg,#b4b6b8,#a7a9ac) repeat-x !important;
+
+		.category {
+			color: #a7a9ac;
+		}
+	}
+
+	&.bg-canceled {
+		background: #a7a9ac linear-gradient(180deg,#b4b6b8,#a7a9ac) repeat-x !important;
+
+		.category {
+			color: #a7a9ac;
+		}
+	}
+
+	&.bg-updated {
+		background: #6fb07c linear-gradient(180deg,#85bc90,#6fb07c) repeat-x !important;
+
+		.category {
+			color: #6fb07c;
+		}
+	}
+
+	&.bg-preliminary-results {
+		background: #8dc63f linear-gradient(180deg,#9ecf5c,#8dc63f) repeat-x !important;
+
+		.category {
+			color: #8dc63f;
+		}
+	}
+
+	&.bg-final-results {
+		background: #8dc63f linear-gradient(180deg,#9ecf5c,#8dc63f) repeat-x !important;
+
+		.category {
+			color: #8dc63f;
+		}
+	}
+
+	&.bg-pattern:after {
+		content: "";
+		background-image: url(../images/tenderbackground.png) !important;
+		background-size: 1000px !important;
+		background-position: -482px 18px !important;
+		opacity: .2;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		position: absolute;
+		background-repeat: no-repeat;
+		z-index: 0;
+	}
+
+	> a {
+		color: initial;
+		text-decoration: none;
+	}
+
+	.card-body {
+		position: relative;
+		z-index: 1;
+	}
+}

@@ -71,6 +71,10 @@ body {
 	}
 }
 
+.site-logo {
+	max-height: 56px;
+}
+
 .btn-group + .info-panel {
 	@include media-breakpoint-up(md) {
 		top: auto;

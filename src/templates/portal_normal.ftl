@@ -76,7 +76,7 @@
 			<div class="navbar navbar-classic navbar-expand-md navbar-light py-2 site-navigation">
 				<div class="container-fluid px-lg-4 px-xl-6">
 					<a class="${logo_css_class} align-items-center d-md-inline-flex d-none logo-md mr-4" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
-						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+						<img alt="${logo_description}" class="mr-2 site-logo" src="${site_logo}" />
 
 						<#if show_site_name>
 							<h1 class="font-weight-light h2 mb-0 text-dark text-uppercase">${site_name}</h1>
@@ -84,7 +84,7 @@
 					</a>
 					
 					<a class="${logo_css_class} align-items-center d-inline-flex d-md-none logo-xs mr-4" href="${site_default_url}" rel="nofollow">
-						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+						<img alt="${logo_description}" class="mr-2 site-logo" src="${site_logo}" />
 
 						<#if show_site_name>
 							<h1 class="font-weight-light h2 mb-0 text-dark text-uppercase">${site_name}</h1>
@@ -135,6 +135,7 @@
 
 							<@liferay_portlet["runtime"]
 								defaultPreferences=preferences
+								instanceId="${group_id}footer_navigation"
 								portletName="com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet"
 							/>
 						</#if>

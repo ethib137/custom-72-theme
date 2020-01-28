@@ -1,0 +1,25 @@
+.sites-directory-taglib {
+	display: flex;
+	flex-wrap: wrap;
+
+	.app-view-entry {
+		align-items: center;
+		flex-basis: calc(20% - 10px);
+		justify-content: center;
+
+		&.app-view-entry-taglib.entry-display-style.display-icon {
+			display: flex;
+			height: auto;
+		}
+	}
+
+	.lfr-search-container-wrapper {
+		width: 100%;
+	}
+
+	@include media-breakpoint-down(md) {
+		.app-view-entry {
+			flex-basis: calc(100% - 10px);
+		}
+	}
+}
