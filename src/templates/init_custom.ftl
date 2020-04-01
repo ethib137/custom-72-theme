@@ -5,6 +5,7 @@
 	youtube_url = getterUtil.getString(themeDisplay.getThemeSetting("youtube-url"))
 	instagram_url = getterUtil.getString(themeDisplay.getThemeSetting("instagram-url"))
 
+	show_breadcrumb = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-breadcrumb"))
 	show_footer = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer"))
 	show_footer_navigation = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-footer-navigation"))
 	show_header = getterUtil.getBoolean(themeDisplay.getThemeSetting("show-header"))

@@ -101,6 +101,24 @@
 		</header>
 	</#if>
 
+	<#if show_breadcrumb>
+	<section>
+		<div class="container">
+  			<div class="row">
+    			<div class="col-sm">
+					<#assign preferences = freeMarkerPortletPreferences.getPreferences("portletSetupPortletDecoratorId", "barebone") />
+
+					<@liferay_portlet["runtime"]
+						defaultPreferences=preferences
+						instanceId="main_breadcrumb"
+    					portletName="com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+	</#if>
+
 	<section class="${portal_content_css_class}" id="content">
 		<h1 class="sr-only">${the_title}</h1>
 
